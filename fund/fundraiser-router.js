@@ -71,3 +71,5 @@ router.put('/project/:id', restricted, (req, res) => {
     })
 
 })
+
+module.exports = router;
