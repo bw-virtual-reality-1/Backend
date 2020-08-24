@@ -5,7 +5,7 @@ module.exports = {
     addProject,
     findProjectsById,
     findProjects,
-    
+    updateProject,
 };
 
 function findProjects() {
@@ -23,4 +23,8 @@ function addUser(user) {
 
 function addProject(project){
     return db('projects').insert(project);
+}
+
+function updateProject(id, updatedProject){
+    return db('projects').where('projectID', id).update(updatedProject)
 }
