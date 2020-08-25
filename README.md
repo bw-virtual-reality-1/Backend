@@ -15,6 +15,7 @@
 
 - LOGIN:
 .post -> 'api/login'
+(send 'username' and 'password')
 
 - VIEW/ADD/EDIT PROJECTS (As a 'Fundraiser'):
 .get/.post/.put -> 'api/auth/fundraiser'
