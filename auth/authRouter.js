@@ -20,7 +20,7 @@ router.post('/register', (req, res) => {
                 res.status(201).json({ data: user, message: "successful registration" })
             })
             .catch(err => {
-                res.status(500).json({ message: err.message })
+                res.status(500).json({ message: err.message, user: 'This user likely exists already, or has improper data form' })
             });
     } else {
         res.status(400).json({ message: 'Invalid credentials'})
