@@ -5,13 +5,13 @@
 - REGISTER:
 .post -> 'api/register'
 * Required fields
-    - [] Role: 1 -> Fundraiser, 2 -> Funder
+    - [] role: 1 -> Fundraiser, 2 -> Funder
     - [] ID: Integer, provided by the API, PK
-    - [] First_Name: String, required
-    - [] Last_Name: String, required
-    - [] Email: String, required
-    - [] Username: String, required
-    - [] Password: String, required
+    - [] firstName: String, required
+    - [] lastName: String, required
+    - [] email: String, required
+    - [] username: String, required
+    - [] password: String, required
 
 - LOGIN:
 .post -> 'api/login'
