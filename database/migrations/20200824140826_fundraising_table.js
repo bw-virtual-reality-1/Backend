@@ -8,6 +8,7 @@ exports.up = function(knex) {
         tbl.string('username').notNullable().unique();
         tbl.string('password').notNullable();
         tbl.string('email').notNullable().unique();
+        tbl.integer('role').notNullable();
     })
     .createTable('projects', tbl => {
         tbl.increments('projectID');
