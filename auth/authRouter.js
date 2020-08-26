@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
 
+const db = require('../database/dbConfig');
+
 const bcryptjs = require('bcryptjs');
 const { isValid } = require('./authService.js');
 const Users = require('./authModel.js');
@@ -50,6 +52,20 @@ router.post('/login', (req, res) => {
         res.status(400).json({ message: 'Didnt work' })
     }
 });
+
+router.get('/projects', (req, res) => {
+    // Return list of projects available from the db
+
+    db('projects')
+        .then(info => {
+            res.status(200).json({ info })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err.message });
+        });
+});
+
 
 function signToken(user) {
     const payload = {
