@@ -8,7 +8,7 @@ const restricted = require('../auth/authMiddleware.js')
 
 const Info = require('../auth/authModel.js');
 
-router.get('/', restricted, (req, res) => {
+router.get('/funder', restricted, (req, res) => {
     // Return list of projects available from the db
 
     db('projects')

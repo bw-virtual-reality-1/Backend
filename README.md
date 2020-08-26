@@ -24,3 +24,6 @@
 - VIEW PROJECTS (As a 'Funder'):
 .get -> 'api/auth/funder'
 * This will be where you request to view the dashboard, returns all available projects
+
+- VIEW PROJECTS (Unauthorized)
+.get -> 'api/projects
